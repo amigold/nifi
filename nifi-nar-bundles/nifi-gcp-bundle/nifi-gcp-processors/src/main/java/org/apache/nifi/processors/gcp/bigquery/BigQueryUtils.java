@@ -52,8 +52,13 @@ public class BigQueryUtils {
             type = LegacySQLTypeName.INTEGER;
         } else if (typeStr.equals("FLOAT")) {
             type = LegacySQLTypeName.FLOAT;
-        } else if (typeStr.equals("TIMESTAMP") || typeStr.equals("DATE")
-                || typeStr.equals("TIME") || typeStr.equals("DATETIME")) {
+        } else if (typeStr.equals("DATE")) {
+            type = LegacySQLTypeName.DATE;
+        } else if (typeStr.equals("DATETIME")) {
+            type = LegacySQLTypeName.DATETIME;
+        } else if (typeStr.equals("TIME")) {
+            type = LegacySQLTypeName.TIME;
+        } else if (typeStr.equals("TIMESTAMP")) {
             type = LegacySQLTypeName.TIMESTAMP;
         } else if (typeStr.equals("RECORD")) {
             type = LegacySQLTypeName.RECORD;
